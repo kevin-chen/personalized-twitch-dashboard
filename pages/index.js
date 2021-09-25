@@ -1,8 +1,7 @@
 import React, { useState } from "react"
-// Main entry point of your app
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-
+import StreamerGrid from '../components/StreamerGridComp'
 
 const Home = () => {
 
@@ -28,7 +27,7 @@ const Home = () => {
       console.log("From server:", json.data)
 
 
-      setFavoriteChannels(prevState => [...prevState, value])
+      setFavoriteChannels(prevState => [...prevState, json.data])
       event.target.elements.name.value = ""
     }
     
@@ -53,6 +52,7 @@ const Home = () => {
         <h1>Welcome to the Personalized Twitch Dashboard! 🎉</h1>
         {renderForm()}
         <div> {favoriteChannels.join(",")}</div>
+        <StreamerGrid channels={favoriteChannels} />
       </div>
     </div>
   )
