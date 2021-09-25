@@ -55,9 +55,29 @@
 }
 
 .gridItem button {
-  width: 75%;
-  height: 30px;
-  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
   border: 0;
   margin: 1em;
+  margin-left: 5px;
+  margin-top: 5px;
+  background-color: #D01135;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.gridNoItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 25%;
+  background-color: #00000000;
+  color:white;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 0 auto;
 }

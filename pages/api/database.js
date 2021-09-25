@@ -1,10 +1,11 @@
 // These are database actions needed to interact with Replit DB!
 // Feel free to see how this works or how to make it better!
-const DB_URL = process.env.DB_URL
+const DB_URL = process.env.REPLIT_DB_URL 
 
 export default async (req, res) => {
   try {
     if (req.method === 'POST') {
+      console.log("Inside database api")
       if (req.body) {
         const { key, value, action } = JSON.parse(req.body)
         
